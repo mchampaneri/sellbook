@@ -1,0 +1,18 @@
+html,
+body{
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body{
+	background-image: url('../images/books.jpg');
+	background-size: 100%;
+}
+
+.login-box{
+	margin-top: 40%;
+	background-color: rgba(200,200,200,0.4);
+	padding: 20px;
+	border-radius: 2px;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.4)
+}

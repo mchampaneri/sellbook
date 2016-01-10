@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/home', function () {
-    return view('welcome');
+Route::get('/login', function () {
+    return view('login');
 });
-
+Route::get('/dashboard', function () {
+    return view('dasboard');
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
