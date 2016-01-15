@@ -10,13 +10,12 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/',function() {
+	return view('welcome');
+});
 
-Route::get('/login', function () {
-    return view('login');
-});
-Route::get('/dashboard', function () {
-    return view('dasboard');
-});
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -28,6 +27,15 @@ Route::get('/dashboard', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
+
+Route::group(['middleware' => 'web'], function () {
+	Route::auth();
+    Route::get('/home', 'HomeController@index');
+    Route::resource('dashboard','DashboardController');
+	Route::resource('sells','SellsController');
+	Route::resource('purchases','PurchaseController');
+});
+
+Route::group(['middleware' => 'web'], function () {
+    
 });

@@ -1,4 +1,4 @@
-
+<?php $menu = true //if you need to access menu ?>
 @extends('main')
 
 @section('title')
@@ -10,7 +10,9 @@ Login
 @endsection
 
 @section('content')
-
+<div class="container-fluid">
+	
+</div>
 @endsection
 
 @section('scripts')

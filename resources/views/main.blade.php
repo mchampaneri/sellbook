@@ -10,12 +10,13 @@
 	@if(isset($menu))
 	@include('layouts.menu')
 	@endif
-	<div class="container-fluid">
+	
 	@yield('content')
-	</div>
+	
 <!-- Java scripts -->
-	@include('layouts.footer')
+	
 	@include('layouts.foot')
+	@include('layouts.footer')
 <!-- End of scripts -->
 </body>
 </html>

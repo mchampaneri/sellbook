@@ -5,13 +5,24 @@ body{
 }
 
 body{
-	background-image: url('../images/books.jpg');
-	background-size: 100%;
+	background-image: url('../images/books.jpg') ;
+	background-size: 100% 100%;
 }
 
+.headbar{
+	margin-top:-20px;
+	background-color: rgba(0,0,00,0.8);
+	width: 100%;
+	text-align: center;
+	text-shadow:2px 2px 1px rgba(0,0,0,0.7);
+}
+h1{
+	padding: 0;
+	margin-top: 0;
+}
 .login-box{
-	margin-top: 40%;
-	background-color: rgba(200,200,200,0.4);
+	margin-top: 20%;
+	background-color: rgba(250,200,200,0.4);
 	padding: 20px;
 	border-radius: 2px;
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.4)
