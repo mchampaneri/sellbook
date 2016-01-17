@@ -1,42 +1,39 @@
-@extends('main')
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+ 	
+	<link rel="stylesheet" type="text/css" 
+		  href="{{asset("global/plugins/bootstrap/css/bootstrap.min.css")}}">
 
-@section('styles')
-<link rel="stylesheet" type="text/css" 
-      href="{{asset('custom/css/login.css')}}">
-@endsection
+   
+	   <!-- Global sty;e starts -->
+	<link rel="stylesheet" type="text/css" 
+		  href="{{asset('global/css/components-md.min.css')}}">
 
-@section('content')
+	<!-- Global Style Ends -->
 
 
-<div class="container spark-screen">
-    <div class="collapse navbar-collapse navbar-inverse" id="spark-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                </ul>
 
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
 
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                    @endif
-                </ul>
-            </div>
+    <link rel="stylesheet" type="text/css" 
+    		href="{{asset('custom/css/site.css')}}">
 
-        <div class="login-box">
-            <h1> <center> SELLBOOK </center></h1>
-        </div>
-</div>
-@endsection
+
+</head>
+<body>
+   
+    <div class="headbar">
+
+    		<div class="pull-left">
+    			<img src="{{asset('layout/img/logo.png')}}">
+    		</div>   
+			<div class="pull-right">
+				<a href="{{url('/login')}}" class="btn green">Login</a>
+				<a href="{{url('/register')}}" class="btn blue">Register</a>
+			</div>
+			<div style="clear: both"></div>
+    </div>
+
+</body>
+</html>

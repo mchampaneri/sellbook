@@ -33,9 +33,11 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/home', 'HomeController@index');
     Route::resource('dashboard','DashboardController');
 	Route::resource('sells','SellsController');
+	Route::resource('users','UsersController');
+	Route::get('/sells/sold/{id}','SellsController@sold'); // Secured With the Auth Check Function //
+	Route::get('/sells/close/{id}','SellsController@close_deal');
 	Route::resource('purchases','PurchaseController');
+	Route::resource('admin','AdminController');
 });
 
-Route::group(['middleware' => 'web'], function () {
-    
-});
+

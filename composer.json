@@ -22,7 +22,9 @@
         "psr-4": {
             "App\\": "app/"
         },
-        "Files": ["helper.php"]        
+        "files": [
+            "app/helpers.php"
+        ]       
     },
     "autoload-dev": {
         "classmap": [

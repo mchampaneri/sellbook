@@ -32,4 +32,19 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Book','buyer_id');
     }
+
+    public function getBranch()
+    {
+        return $this->belongsTo('App\Control','branch');
+    }
+
+    public function sent_messages()
+    {
+        return $this->hasMany('App\Message','sender');
+    }
+
+    public function recived_message()
+    {
+        return $this->hasMany('App\Message','reciver');
+    }
 }

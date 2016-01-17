@@ -1,0 +1,22 @@
+
+html,
+body{
+	height: 100%;
+	overflow: hidden;
+}
+
+body{
+	background-image: url('../images/books.jpg') ;
+	background-size: 100% 100%;
+}
+
+.headbar{
+	color:rgba(250,250,255,1);
+	background-color: rgba(0,0,00,0.8);
+	width: 100%;	
+	text-shadow:2px 2px 1px rgba(0,0,0,0.7);
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+	padding: 3px;
+}
+
+

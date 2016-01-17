@@ -10,44 +10,63 @@ Book Details Page
 @endsection
 
 @section('content')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-sm-3">
-			<h3>	Book You May Intrested In </h3>
- 		</div>
- 		<div class="col-sm-9 ">
- 			<div class="panel panel-default">	
-	 			<div class="panel-heading">	 
-		 			<div class="row ">
-			 			<div class="col-md-8">			
-			 				<h1 class="box-heading"> 	{{$book->name}} </h1>	 				
-			 			</div>	
-			 			<div class="col-md-2 ">
-							<form method="post" action="{{route('purchases.update',['id'=>$book->id])}}">
-								{{ csrf_field()}}
-								<input type="hidden" name="_method" value="put">
-								<input type="submit" class="btn btn-success" value="Purchase">
-							</form>
-							</div>
-							<div class="col-md-2 ">
-							<a href="{{route('purchases.index')}}" class="btn btn-primary"> Return Back </a>
-			 				</div>
-			 			</div>
-	 			</div>
-		 		<div class="panel-body">
-		 			
-		 			{{ $book->price }}
-		 			{{ $book->condition}}
-		 			{{ $book->catagory}}
-		 			<?php $Owner = $book->seller()->get()->first(); ?>
-		 			{{ $Owner->name}}
-		 			{{ $Owner->email}}
-		 			
+
+		<div class="page-content">
+			<div class="container">
+	 			<div class="portlet solid grey-cascade">	
+		 			<div class="portlet-title">	 
+			 			<div class="row ">
+				 			<div class="col-md-8">			
+				 				 <h2 style="text-align: center">	{{$book->name}} </h2> 	 				
+				 			</div>	
+				 			<div class="col-md-2 ">
+								<form method="post" action="{{route('purchases.update',['id'=>$book->id])}}">
+									{{ csrf_field()}}
+									<input type="hidden" name="_method" value="put">
+									<input type="submit" class="btn btn-success" value="Create Deal">
+								</form>
+								</div>
+								<div class="col-md-2 ">
+								<a href="{{route('purchases.index')}}" class="btn btn-primary"> Return Back </a>
+				 				</div>
+				 			</div>
+		 			</div>
+			 		<div class="portlet-body"  >
+				 	<table class="table table-boarderd">
+				 		<thead>
+				 			<tr>
+				 				<td>Book Price</td>
+				 				<td>Condition</td>
+				 				<td>Catagory</td>
+				 				<td>Current Owner</td>
+				 				<td>Email Address of Owner</td>
+				 				<td></td>
+				 			</tr>
+				 		</thead>
+				 		<tbody>
+				 		<tr>	
+				 			<td>	{{ $book->price }} </td>
+				 			<td>	{{ $book->condition}} </td>
+				 			<td>    {{ $book->catagory}} </td>
+				 				<?php $Owner = $book->seller()->get()->first(); ?> 
+				 			<td>	{{ $Owner->name}} </td>
+				 			<td>    {{ $Owner->email}} </td>
+				 		</tr>
+				 		</tbody>
+			 		</table>
+				 	<div class="row">	
+				 		<p><div class="col-sm-8">
+				 			<h2> Description About Book</h2>							
+				 			.... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book 
+				 			.... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book 
+				 			</div>
+			 			</p>
+			 		</div>		
+			 		</div>
 		 		</div>
 	 		</div>
  		</div>
-	</div>
-</div>
+	
 @endsection
 
 @section('scripts')

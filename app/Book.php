@@ -11,4 +11,13 @@ class Book extends Model
     {
 	return $this->belongsTo('App\User','seller_id');
 	}
+	 public function buyer()
+    {
+	return $this->belongsTo('App\User','buyer_id');
+	}
+
+	public function messages()
+	{
+		return $this->hasMany('App\Message','book_id');
+	}
 }
