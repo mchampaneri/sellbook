@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\CreateBook;
 use App\Http\Controllers\Controller;
 use App\Book;
 use App\User;
@@ -21,7 +22,7 @@ class SellsController extends Controller
     	return view('selldesk/index')->with(['user'=>$user,
                                              'catagories'=>$catagories]);
     }
-    public function store(Request $request)
+    public function store(CreateBook $request)
     {
     	$book = new Book;
     	$book->name=$request->name;
@@ -39,7 +40,7 @@ class SellsController extends Controller
     	$book = Book::find($id);
     	return view('selldesk/edit')->with(['book'=>$book]);
     }
-    public function update(Request $request, $id)
+    public function update(CreateBook $request, $id)
     {
     	$book = Book::find($id);
     	$book->name=$request->name;

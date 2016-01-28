@@ -37,21 +37,17 @@ class UsersController extends Controller
          $user->sem =$request->sem;
          if(isset($request->branch))
          $user->branch = $request->branch;
+         $user->update();
 
          if(isset($request->oldpassword) && isset($request->newpassword))
          {
 
-            if($user->password == bcrypt($request->oldpassword) )
                 $user->password = $request->newpassword;
-            else
-                echo $user->password;
-                echo "<br>";
-                echo bcrypt($request->oldpassword);
-                die();               
-                return " An authorized Access log generated . Thank you";
+                $user->update();
+           
          }
        
-         $user->update();
+       
          return redirect()->route('dashboard.index');
 
     }

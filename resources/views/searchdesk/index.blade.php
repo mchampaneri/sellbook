@@ -82,7 +82,9 @@ Search Desk
 																			<td>{{$book->name}}</td>
 																			<td>{{$book->price}}</td>
 																			<td>{{$book->catagory}}</td>
-																			<td>{{$book->condition}}</td>
+																<?php 
+																     $value = ["Good","Perfect","Usable"]; ?>
+																			<td>{{$value[$book->condition]}}</td>
 																			<td><a class="btn btn-primary" 
 																				href="{{route('sells.show',['id'=>$book->id])}}"> 
 																				Book Detail
@@ -102,31 +104,7 @@ Search Desk
 														</div>	
 												    </div>
 										</div>
-										<div class="tab-pane" id="purchased">
-												
-													<table class="table table-hover table-striped">
-														<thead>
-															<tr>
-																<th>Book Name</th>
-																<th>Price</th>
-																<th>Owner</th>
-															</tr>
-														</thead>
-														<tbody>
-														@if(isset($user))
-														@foreach ($user->purchases()->where('status',2)->get() as $book) 
-															<tr>
-																<td>{{$book->name}}</td>
-																<td>{{$book->price}}</td>						
-																<td>{{$book->seller()->get()->first()->name}}
-																</td>
-																
-															</tr>
-														@endforeach
-													@endif
-														</tbody>
-													</table>
-										</div>
+										
 								</div>	
 						
 					</div>

@@ -1,39 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Welcome</title>
- 	
-	<link rel="stylesheet" type="text/css" 
-		  href="{{asset("global/plugins/bootstrap/css/bootstrap.min.css")}}">
+@extends('layouts.app')
 
-   
-	   <!-- Global sty;e starts -->
-	<link rel="stylesheet" type="text/css" 
-		  href="{{asset('global/css/components-md.min.css')}}">
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">Welcome</div>
 
-	<!-- Global Style Ends -->
-
-
-
-
-    <link rel="stylesheet" type="text/css" 
-    		href="{{asset('custom/css/site.css')}}">
-
-
-</head>
-<body>
-   
-    <div class="headbar">
-
-    		<div class="pull-left">
-    			<img src="{{asset('layout/img/logo.png')}}">
-    		</div>   
-			<div class="pull-right">
-				<a href="{{url('/login')}}" class="btn green">Login</a>
-				<a href="{{url('/register')}}" class="btn blue">Register</a>
-			</div>
-			<div style="clear: both"></div>
+                <div class="panel-body">
+                    Your Application's Landing Page.
+                    HI ,{{ Auth::user()->name}}
+                </div>
+                    <a href="{{url('/logout')}}">Log me Out</a>
+            </div>
+        </div>
     </div>
-
-</body>
-</html>
+</div>
+@endsection

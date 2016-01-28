@@ -66,7 +66,7 @@ Login
                                     <div class="portlet light boardered ">
                                           <div class="portlet-title">
                                             <div class="caption">
-                                              Catagorys For Books
+                                              Catagories For Books
                                             </div>
                                             <div class="tools">
                                                   <a href="javascript:;" class="collapse" data-original-title="" title=""> </a>
@@ -95,11 +95,11 @@ Login
                                                     <a href="{{route('admin.edit',['id'=>$catagory->id])}}" class="btn blue">Edit</a>
                                                   </td>
                                                   <td>
-                                                    <form class="form-horizontal" role="form" method="get" action="{{ route('admin.destroy',['id'=>$catagory->id]) }}">
+                                                    <form class="form-horizontal" role="form" method="post" action="{{ route('admin.destroy',['id'=>$catagory->id]) }}">
                                                                  {!! csrf_field() !!}
                                                         <input type="hidden" name="_method" value="delete">
                                                         <input type="hidden" name="value" value="delete">
-                                                      <input type="submit" class="btn btn-danger" value="Close Deal">
+                                                      <input type="submit" class="btn btn-danger" value="Remove">
                                                     </form>
                                                   </td>
                                                 </tr>
@@ -147,11 +147,11 @@ Login
                                                     <a href="{{route('admin.edit',['id'=>$branch->id])}}" class="btn blue">Edit</a>
                                                   </td>
                                                   <td>
-                                                    <form class="form-horizontal" role="form" method="get" action="{{ route('admin.destroy',['id'=>$branch->id]) }}">
+                                                    <form class="form-horizontal" role="form" method="post" action="{{ route('admin.destroy',['id'=>$branch->id]) }}">
                                                                  {!! csrf_field() !!}
                                                         <input type="hidden" name="_method" value="delete">
                                                         <input type="hidden" name="value" value="delete">
-                                                      <input type="submit" class="btn btn-danger" value="Close Deal">
+                                                      <input type="submit" class="btn btn-danger" value="Remove">
                                                     </form>
                                                   </td>
                                                 </tr>

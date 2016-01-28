@@ -18,12 +18,12 @@
                                 <img src="{{asset("layout/img/logo.png")}}" alt="Logo"> </a>
                             <!-- END LOGO -->
                             <!-- BEGIN SEARCH -->
-                            <form class="search" action="extra_search.html" method="GET">
+                           {{--  <form class="search" action="extra_search.html" method="GET">
                                 <input type="name" class="form-control" name="query" placeholder="Search...">
                                 <a href="javascript:;" class="btn submit">
                                     <i class="fa fa-search"></i>
                                 </a>
-                            </form>
+                            </form> --}}
                             <!-- END SEARCH -->
                             <!-- BEGIN TOPBAR ACTIONS -->
                             <div class="topbar-actions">
@@ -111,6 +111,7 @@
                                             <a href="{{route("users.edit",['id'=>Auth::user()->id])}}">
                                                 <i class="icon-user"></i> My Profile                                               
                                             </a>
+                                              
                                         </li>                          
                                                              
 
@@ -136,25 +137,25 @@
                             <ul class="nav navbar-nav">
                                 <!--  Dashboard  menu -->
                                 <li class="dropdown dropdown-fw  {{set_active(['dashbaord*','home'],'active open selected')}}">
-                                    <a href="javascript:;" class="text-uppercase">
+                                    <a href="{{ route('dashboard.index') }}" class="text-uppercase">
                                         <i class="icon-home"></i> Home </a>
-                                    <ul class="dropdown-menu dropdown-menu-fw">
+                                    {{-- <ul class="dropdown-menu dropdown-menu-fw">
                                         <li class="active">
                                             <a href="{{ route('dashboard.index') }}">
                                                 <i class="icon-bar-chart"></i> Dashboard </a>
                                         </li>
                                     
-                                    </ul>
+                                    </ul> --}}
                                 </li>
                                 <!-- Selling Menu -->
                                 <li class="dropdown dropdown-fw  {{set_active(['sells*'],'active open selected')}}">
-                                    <a href="javascript:;" class="text-uppercase">
+                                    <a href="{{ route('sells.index') }}" class="text-uppercase">
                                         <i class="icon-home"></i> Sell </a>
-                                    <ul class="dropdown-menu dropdown-menu-fw">
+                                   {{--  <ul class="dropdown-menu dropdown-menu-fw">
                                         <li class="active">
                                             <a href="{{ route('sells.index') }}">
                                                 <i class="icon-bar-chart"></i> Inventory </a>
-                                        </li>
+                                        </li> --}}
                                     {{--     <li>                                            
                                             <a href="{{ route('sells.index') }}">
                                                 <i class="icon-bar-chart"></i> List The Sold Books </a>
@@ -168,17 +169,17 @@
                                                 <i class="icon-bar-chart"></i> List The Rest Books </a>
                                         </li> --}}
                                     
-                                    </ul>
+                                    {{-- </ul> --}}
                                 </li>
                                 <!-- Searching Menu -->
                                 <li class="dropdown dropdown-fw {{set_active('purchases*','active open selected')}} ">
-                                    <a href="javascript:;" class="text-uppercase">
+                                    <a href="{{ route('purchases.index') }}" class="text-uppercase">
                                         <i class="icon-home"></i> Get A Book </a>
-                                    <ul class="dropdown-menu dropdown-menu-fw">
+                                    {{-- <ul class="dropdown-menu dropdown-menu-fw">
                                         <li class="active">
                                             <a href="{{ route('purchases.index') }}">
                                                 <i class="icon-bar-chart"></i> Purchases </a>
-                                        </li>
+                                        </li> --}}
                                        {{--  <li>                                            
                                             <a href="{{ route('dashboard.index') }}">
                                                 <i class="icon-bar-chart"></i> List The Purchased Books </a>
@@ -192,7 +193,7 @@
                                                 <i class="icon-bar-chart"></i> List The Whish List Books </a>
                                         </li> --}}
                                     
-                                    </ul>
+                                   {{--  </ul> --}}
                                 </li>
                                 <!-- Search Menu -->
                                 <li class="dropdown more-dropdown">

@@ -22,10 +22,10 @@ Sell Desk
 					<div class="portlet-body">	
 								<ul class="nav nav-tabs ">
 									  <li class="active">
-									    <a href="#inprogress" data-toggle="tab">In Progress</a>
+									    <a href="#new" data-toggle="tab">New</a>
 									  </li>
 									  <li class=>
-									  	<a href="#new" data-toggle="tab">New</a>
+									  	<a href="#inprogress" data-toggle="tab">Unsold</a>
 									  </li>
 									  <li class=>
 									  	<a href="#sold" data-toggle="tab">Sold</a>
@@ -36,7 +36,7 @@ Sell Desk
 								</ul>				
 													
 								<div class="tab-content">
-									<div class="tab-pane active" id="inprogress">
+									<div class="tab-pane " id="inprogress">
 											<h2>In Progress</h2>
 											<br>										
 												<table class="table table-hover" id="table1">
@@ -71,7 +71,7 @@ Sell Desk
 													</tbody>
 												</table>
 									</div>
-									<div class="tab-pane" id="new">
+									<div class="tab-pane active" id="new">
 												<h2> Add new Book </h2>
 												<div class="box">
 													<form class="form-horizontal" role="form" 
@@ -114,32 +114,7 @@ Sell Desk
 														</div>
 													</form>
 												</div>
-									</div>	
-									<div class="tab-pane " id="sold">
-										<h2>Sold Books</h2><br>	
-												<table class="table table-hover" >
-													<thead>
-														<tr>
-															<th>Book Name</th>
-															<th>Price</th>
-															<th>Buyer</th>													
-														</tr>
-													</thead>
-													<tbody>
-													@if(isset($user))
-														@foreach ($user->sells()->where('status',2)->get() as $book) 
-															<tr >
-																<td>{{$book->name}}</td>
-																<td>{{$book->price}}</td>						
-																<td>
-																	{{$book->buyer()->get()->first()->name}}
-																</td>
-															</tr>
-														@endforeach
-													@endif
-													</tbody>
-												</table>
-									</div>		
+									</div>												
 									<div class="tab-pane " id="deals">
 										<h2> Books For You Got Deal</h2>	
 												<table class="table table-hover" id="table2">
