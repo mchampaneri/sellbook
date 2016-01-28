@@ -28,9 +28,6 @@ Sell Desk
 									  	<a href="#inprogress" data-toggle="tab">Unsold</a>
 									  </li>
 									  <li class=>
-									  	<a href="#sold" data-toggle="tab">Sold</a>
-									  </li>
-									  <li class=>
 									  	<a href="#deals" data-toggle="tab">Deals</a>
 									  </li>
 								</ul>				

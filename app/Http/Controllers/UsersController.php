@@ -31,25 +31,30 @@ class UsersController extends Controller
          $user->name = $request->name;
          if(isset($request->email))
          $user->email = $request->email;
+         if(isset($request->contact_number))
+         $user->contact_number = $request->contact_number;
          if(isset($request->enrollment_number))
          $user->enrollment_number = $request->enrollment_number;
          if(isset($request->sem))
          $user->sem =$request->sem;
          if(isset($request->branch))
          $user->branch = $request->branch;
-         $user->update();
-
-         if(isset($request->oldpassword) && isset($request->newpassword))
-         {
-
-                $user->password = $request->newpassword;
-                $user->update();
-           
-         }
+         $user->save();
+     
        
        
          return redirect()->route('dashboard.index');
 
+    }
+    public function changepassword(Request $request,$id)
+    {
+         $user = User::find($id);
+         if(isset($request->oldpassword) && isset($request->newpassword))
+         {
+            $user->password = Hash::make($request->newpassword);
+            $user->update();
+            return redirect()->route('dashboard.index');
+         }
     }
 
 }

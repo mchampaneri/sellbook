@@ -24,9 +24,7 @@ Search Desk
 									  <li class=>
 									  	<a href="#findnew" data-toggle="tab">Find New Book</a>
 									  </li>
-									  <li class=>
-									  	<a href="#purchased" data-toggle="tab">Purchased Book</a>
-									  </li>
+								
 								</ul>						
 							
 						
@@ -39,6 +37,7 @@ Search Desk
 																<th>Book Name</th>
 																<th>Price</th>
 																<th>Owner</th>
+																<th>Contact Number</th>
 																<th>Remove</th>
 															</tr>
 														</thead>
@@ -49,6 +48,8 @@ Search Desk
 																<td>{{$book->name}}</td>
 																<td>{{$book->price}}</td>						
 																<td>{{$book->seller()->get()->first()->name}}
+																</td>
+																<td>{{$book->seller()->get()->first()->contact_number}}
 																</td>
 																<td>
 																	<form class="form-horizontal" role="form" method="POST" action="{{ route('purchases.destroy',['id'=>$book->id]) }}">

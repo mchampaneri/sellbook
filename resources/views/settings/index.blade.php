@@ -59,7 +59,13 @@ Profile
                                                     </div>
                                                     </div>
                                                     <br>
-                                                
+                                                     <div class="form-group">
+                                                    <label class="col-md-4 control-label">Contact Number</label>
+                                                    <div class="col-md-6">
+                                                       <input type="text" class="form-control" name="contact_number" value="{{$user->contact_number}}">
+                                                    </div>
+                                                    </div>
+                                                    <br>
                         	                        <div class="form-group">                
                                                     <label class="col-md-4 control-label">Semeter</label>
                                                     <div class="col-md-6">
@@ -101,11 +107,11 @@ Profile
                                             </form>
                                         </div>
                                         <div class="col-md-6">
-                                            <form  role="form" method="POST" action="{{ route('users.update',['id'=>Auth::user()->id]) }}"
+                                            <form  role="form" method="get" action="{{url('/changepassword/'.Auth::user()->id)}}"
                                                     >
                                                 {!! csrf_field() !!}
 
-                                                    <input type="hidden" name='_method' value="put">
+                                                    
 
                                                     <div class="form-group">
                                                     <label class="col-md-4 control-label">Old Password</label>

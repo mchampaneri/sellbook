@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Http\Request;
 
-
+use App\Http\Requests\UserRequest;
 use App\User;
 
 
@@ -43,8 +43,8 @@ Route::post('/login',function(Request $request) {
     	}
     	else
     	{
-    		return "failed";
-    	}
+    		return view('login');
+    	}    	
 });
 
 Route::post('/register',function(UserRequest $request) {
@@ -79,6 +79,7 @@ Route::group(['middleware'=>'auth'], function() {
 		Route::get('/sells/close/{id}','SellsController@close_deal');
 		Route::resource('purchases','PurchaseController');
 		Route::resource('admin','AdminController');
+		Route::get('/changepassword/{id}','UsersController@changepassword');
 });
     
 });

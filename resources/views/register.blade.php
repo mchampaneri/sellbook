@@ -37,6 +37,11 @@ Login
                         <input type="text" class="form-control" 
                                 name="email" placeholder="user@example.com">
                     </div>
+                     <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="text" class="form-control" 
+                                name="contact_number" placeholder="1122334455">
+                    </div>
                     <div class="form-group">
                         <label>Enrollment Number</label>
                         <input type="text" class="form-control" 

@@ -62,7 +62,7 @@
                                                         <a href="javascript:;">
                                                             <span class="details">
                                                                 <span class="label label-sm label-icon label-success">
-                                                                    <i class="fa fa-plus"></i>
+                                                                    <i class="fa fa-bullhorn"></i>
                                                                 </span> Deal Cancled for{{ $message->book()->first()->name}} 
                                                                          By 
                                                                 </span>
@@ -74,7 +74,7 @@
                                                         <a href="javascript:;">
                                                             <span class="details">
                                                                 <span class="label label-sm label-icon label-success">
-                                                                    <i class="fa fa-plus"></i>
+                                                                    <i class="fa fa-bullhorn"></i>
                                                                 </span> Deal Cancled for {{ $message->book()->first()->name}}
                                                                          By You
                                                                 </span>
@@ -85,7 +85,7 @@
                                                         <a href="javascript:;">
                                                             <span class="details">
                                                                 <span class="label label-sm label-icon label-success">
-                                                                    <i class="fa fa-plus"></i>
+                                                                    <i class="fa fa-bell-o"></i>
                                                                 </span> Deal Completed By You {{ $message->book()->first()->name}}
                                                                  </span>
                                                            

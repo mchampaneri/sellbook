@@ -38,6 +38,7 @@ Book Details Page
 				 				<td>Book Price</td>
 				 				<td>Condition</td>
 				 				<td>Catagory</td>
+				 				<td>Contact Number</td>
 				 				<td>Current Owner</td>
 				 				<td>Email Address of Owner</td>
 				 				<td></td>
@@ -49,19 +50,13 @@ Book Details Page
 				 			<td>	{{ $book->condition}} </td>
 				 			<td>    {{ $book->catagory}} </td>
 				 				<?php $Owner = $book->seller()->get()->first(); ?> 
+				 			<td>	{{ $Owner->contact_number}}</td>
 				 			<td>	{{ $Owner->name}} </td>
 				 			<td>    {{ $Owner->email}} </td>
 				 		</tr>
 				 		</tbody>
 			 		</table>
-				 	<div class="row">	
-				 		<p><div class="col-sm-8">
-				 			<h2> Description About Book</h2>							
-				 			.... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book 
-				 			.... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book .... Book 
-				 			</div>
-			 			</p>
-			 		</div>		
+				 	
 			 		</div>
 		 		</div>
 	 		</div>

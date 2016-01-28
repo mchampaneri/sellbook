@@ -26,10 +26,11 @@ class UserRequest extends Request
         return [
             'name' => 'required',
             'email'=>'required',
-            'enrollment_number'=>'required',
+            'enrollment_number'=>'required|numeric',
             'branch' => 'required',
             'sem'=>'required',
-            'password' =>'required'
+            'password' =>'required',
+            'contact_number'=>'required|numeric'
         ];
     }
 }
